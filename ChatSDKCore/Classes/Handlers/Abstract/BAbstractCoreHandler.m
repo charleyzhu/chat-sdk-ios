@@ -38,6 +38,11 @@
     return [self sendMessageWithText:text withThreadEntityID:threadID withMetaData:nil];
 }
 
+-(RXPromise *) sendGiftMessage:(NSString *)giftId Icon:(NSString *) icon Svga:(NSString *) svga  Coin:(NSString *) coin Name:(NSString *)name ThreadEntityID:(NSString *)threadID {
+    id<PMessage> message = [[[BMessageBuilder giftMessage:giftId Icon:icon Svga:svga Coin:coin Name:name] thread:threadID] build];
+    return [self sendMessage:message];
+}
+
 -(RXPromise *) sendMessage: (id<PMessage>) messageModel {
     // This is an abstract method which must be overridden
     NSLog(@"sendMessage: must be overridden");

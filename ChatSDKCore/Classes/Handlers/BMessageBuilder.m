@@ -33,6 +33,10 @@
     return [[[self alloc] init] imageMessage:image];
 }
 
++(instancetype) giftMessage:(NSString *)giftId Icon:(NSString *) icon Svga:(NSString *) svga  Coin:(NSString *) coin Name:(NSString *) name {
+    return [[[self alloc] init] giftMessage:giftId Icon:icon Svga:svga Coin:coin Name:name];
+}
+
 -(id<PMessage>) build {
     return _message;
 }
@@ -84,6 +88,18 @@
     [self type:bMessageTypeImage];
     _message.placeholder = UIImageJPEGRepresentation(image, 0);
     
+    return self;
+}
+
+-(BMessageBuilder *) giftMessage:(NSString *)giftId Icon:(NSString *) icon Svga:(NSString *) svga  Coin:(NSString *) coin Name:(NSString *) name {
+    [self type:bmessageTypeGift];
+    [_message setMeta:@{
+        bMessageGiftID: giftId,
+        bMessageGiftIcon: icon,
+        bMessageGiftSvga: svga,
+        bMessageGiftCoin: coin,
+        bMessageGiftName: name
+    }];
     return self;
 }
 

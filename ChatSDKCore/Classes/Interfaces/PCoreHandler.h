@@ -115,6 +115,14 @@
  */
 -(RXPromise *) sendMessageWithText:(NSString *)text withThreadEntityID:(NSString *)threadID withMetaData: (NSDictionary *)meta;
 
+    /// 发送礼物消息
+    /// @param giftId 礼物id
+    /// @param icon 图标
+    /// @param svga svga
+    /// @param coin 金币
+    /// @param name 名字
+    /// @param threadID 线程ID
+-(RXPromise *) sendGiftMessage:(NSString *)giftId Icon:(NSString *) icon Svga:(NSString *) svga  Coin:(NSString *) coin Name:(NSString *)name ThreadEntityID:(NSString *)threadID;
 /**
  * @brief Send a message object
  */

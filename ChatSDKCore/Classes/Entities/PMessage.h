@@ -20,7 +20,9 @@ typedef enum {
     bMessageTypeSystem = 5,
     bMessageTypeSticker = 6,
     bMessageTypeFile = 7,
+    bmessageTypeGift = 20,
     bMessageTypeCustom = 99,
+    
 } bMessageType;
 
 typedef enum {
@@ -50,6 +52,11 @@ typedef enum {
 
 #define bMessageSystemType @"system-type"
 
+#define bMessageGiftID @"gift_id"
+#define bMessageGiftIcon @"icon"
+#define bMessageGiftSvga @"svga"
+#define bMessageGiftCoin @"coin"
+#define bMessageGiftName @"name"
 
 // Is the message the first, last or a middle message
 //#define bMessagePosition @"position"

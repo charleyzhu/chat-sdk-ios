@@ -17,6 +17,7 @@
 +(instancetype) textMessage: (NSString *) text;
 +(instancetype) imageMessage: (UIImage *) image;
 +(instancetype) systemMessage: (NSString *) text type: (bSystemMessageType) systemMessageType;
++(instancetype) giftMessage:(NSString *)giftId Icon:(NSString *) icon Svga:(NSString *) svga  Coin:(NSString *) coin Name:(NSString *) name;
 
 -(BMessageBuilder *) textMessage: (NSString *) text;
 -(BMessageBuilder *) thread: (NSString *) threadID;
