@@ -10,7 +10,7 @@
 #import "PThread_.h"
 #import "bMessageStatus.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, bMessageType) {
     bMessageTypeAll = -1,
     bMessageTypeText = 0,
     bMessageTypeLocation = 1,
@@ -23,7 +23,7 @@ typedef enum {
     bmessageTypeGift = 20,
     bMessageTypeCustom = 99,
     
-} bMessageType;
+};
 
 typedef enum {
     bMessagePosFirst = 0x1,
