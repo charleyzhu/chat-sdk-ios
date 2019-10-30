@@ -33,6 +33,35 @@
 -(id<PUser>) userModel {
     return self.user;
 }
+#pragma Gift information
+
+- (NSString *)giftID {
+    NSString *gid = self.meta[bMessageGiftID];
+    
+    if (gid) {
+        return gid;
+    }else {
+        return @"";
+    }
+}
+
+- (NSURL *)giftIcon {
+    NSString *url = self.meta[bMessageGiftIcon];
+    return [NSURL URLWithString:url];
+}
+
+- (NSURL *)giftSvga {
+    NSString *url = self.meta[bMessageGiftSvga];
+    return [NSURL URLWithString:url];
+}
+
+- (NSURL *)giftCoin {
+    return self.meta[bMessageGiftCoin];
+}
+
+- (NSString *)giftName {
+    return self.meta[bMessageGiftName];
+}
 
 #pragma Image information
 
