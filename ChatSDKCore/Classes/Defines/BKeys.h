@@ -89,5 +89,6 @@
 #define bUserPrivilegeKey @"privilege"
 #define bUserNameLowercase @"name-lowercase"
 #define bUID @"uid"
+#define bPaoUID @"pao-uid"
 
 #endif /* BKeys_h */

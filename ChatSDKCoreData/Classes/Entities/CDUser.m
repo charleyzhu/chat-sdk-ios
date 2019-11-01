@@ -38,6 +38,15 @@
     [self setMetaValue:phoneNumber forKey:bUserPhoneKey];
 }
 
+// paopao System UID
+-(void) setPaoUID: (NSString *)uid {
+    [self setMetaValue:uid forKey:bPaoUID];
+}
+
+-(NSString *) paoUID {
+    return [self.meta metaStringForKey:bPaoUID];
+}
+
 -(NSString *) pushChannel {
     NSString * channel = self.entityID;
     channel = [channel stringByReplacingOccurrencesOfString:@"." withString:@"1"];

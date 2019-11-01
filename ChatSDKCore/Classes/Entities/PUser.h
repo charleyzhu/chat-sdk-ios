@@ -63,6 +63,10 @@
 //-(void) addContact: (id<PUser>) user;
 -(NSArray *) getContacts;
 
+// paopao System UID
+-(void) setPaoUID: (NSString *)uid;
+-(NSString *) paoUID;
+
 //-(RXPromise *) loadProfileImage: (BOOL) force;
 
 -(void) addLinkedAccountsObject: (id<PUserAccount>) account;
