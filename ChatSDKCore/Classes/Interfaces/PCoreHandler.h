@@ -123,6 +123,9 @@
     /// @param name 名字
     /// @param threadID 线程ID
 -(RXPromise *) sendGiftMessage:(NSString *)giftId Icon:(NSString *) icon Svga:(NSString *) svga  Coin:(NSString *) coin Name:(NSString *)name ThreadEntityID:(NSString *)threadID;
+
+-(RXPromise *) sendLikerMessage:(bLikeMessageType)likeType withThreadEntityID:(NSString *)threadID;
+
 /**
  * @brief Send a message object
  */

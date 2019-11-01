@@ -43,6 +43,11 @@
     return [self sendMessage:message];
 }
 
+-(RXPromise *) sendLikerMessage:(bLikeMessageType)likeType withThreadEntityID:(NSString *)threadID {
+    id<PMessage> message = [BMessageBuilder likerMessage:likeType];
+    return [self sendMessage:message];
+}
+
 -(RXPromise *) sendMessage: (id<PMessage>) messageModel {
     // This is an abstract method which must be overridden
     NSLog(@"sendMessage: must be overridden");

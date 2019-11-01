@@ -37,6 +37,10 @@
     return [[[self alloc] init] giftMessage:giftId Icon:icon Svga:svga Coin:coin Name:name];
 }
 
++(instancetype) likerMessage:(bLikeMessageType)likeType {
+    return [[[self alloc]init]likerMessage:likeType];
+}
+
 -(id<PMessage>) build {
     return _message;
 }
@@ -100,6 +104,15 @@
         bMessageGiftCoin: coin,
         bMessageGiftName: name
     }];
+    return self;
+}
+
+-(BMessageBuilder *) likerMessage:(bLikeMessageType)likerType {
+    [self type:bmessageTypeLiker];
+    [_message setMeta:@{
+        bMessageLikerType: @(likerType)
+    }];
+    
     return self;
 }
 

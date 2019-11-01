@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, bMessageType) {
     bMessageTypeSticker = 6,
     bMessageTypeFile = 7,
     bmessageTypeGift = 20,
+    bmessageTypeLiker = 21,
     bMessageTypeCustom = 99,
     
 };
@@ -58,6 +59,8 @@ typedef enum {
 #define bMessageGiftCoin @"coin"
 #define bMessageGiftName @"name"
 
+#define bMessageLikerType @"like-type"
+
 // Is the message the first, last or a middle message
 //#define bMessagePosition @"position"
 
@@ -71,6 +74,11 @@ typedef enum {
     bSystemMessageTypeInfo = 1,
     bSystemMessageTypeError = 2,
 } bSystemMessageType;
+
+typedef NS_ENUM(NSInteger,bLikeMessageType){
+    bLikeMessageTypeLike = 1,
+    bLikeMessageTypeSuperLike = 2,
+};
 
 @protocol PMessage <PEntity>
 
